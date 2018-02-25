@@ -1,0 +1,7 @@
+.DS_Store
+*.sass-cache
+*.css.map
+
+# We only want main.css in the repo.
+assets/css/*
+!assets/css/main.css
