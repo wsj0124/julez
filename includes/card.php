@@ -5,7 +5,7 @@
                 <img src="<?php echo $story->thumbnail()->url('golden-medium'); ?>" alt="<?php echo $story->title(); ?>" title="<?php echo $story->title(); ?>">
             </div>
             <div class="details">
-                <h2><?php echo $story->title(); ?></h2>
+                <h2><?php echo $story->date('d.m.Y'); ?> &ndash; <?php echo $story->title(); ?></h2>
             </div>
         </a>
     </div>
