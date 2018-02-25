@@ -13,7 +13,7 @@
             </div>
         <?php endif; ?>
         <?php if ($image->image()): ?>
-            <a data-fresco-group="image-group" data-fresco-caption="" class="fresco" href="<?php echo $image->image()->url('large'); ?>">
+            <a data-fresco-group="image-group" data-fresco-caption="<?php echo $image->image()->caption(); ?>" class="fresco" href="<?php echo $image->image()->url('large'); ?>">
                 <img src="<?php echo $image->image()->url('large'); ?>">
             </a>
         <?php endif; ?>
