@@ -3,11 +3,13 @@
         <div class="o-layout">
             <?php foreach ($images as $image): ?>
                 <div class="o-layout__item <?php echo $image->width; ?>">
-                    <?php if ($image->width === 'u-1/1@desktop'): ?>
-                        <img src="<?php echo $image->image->url('large'); ?>">
-                    <?php else: ?>
-                        <img src="<?php echo $image->image->url('golden-large'); ?>">
-                    <?php endif; ?>
+                    <a data-fresco-group="image-group" data-fresco-caption="" class="fresco" href="<?php echo $image->image->url('large'); ?>">
+                        <?php if ($image->width === 'u-1/1@desktop'): ?>
+                            <img src="<?php echo $image->image->url('large'); ?>">
+                        <?php else: ?>
+                            <img src="<?php echo $image->image->url('golden-large'); ?>">
+                        <?php endif; ?>
+                    </a>
                 </div>
             <?php endforeach; ?>
         </div>
