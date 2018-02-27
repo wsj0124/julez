@@ -14,14 +14,3 @@
         </script>
     </head>
     <body>
-        <header class="wrapper" id="nav">
-            <h1><a href="<?php echo site_url(); ?>"><?php echo bloginfo(); ?></a></h1>
-        </header>
-
-        <?php if (has_nav_menu('header-menu')): ?>
-            <section class="social">
-                <?php wp_nav_menu(['theme_location' => 'header-menu']); ?>
-            </section>
-        <?php endif; ?>
-
-        <div class="<?php echo is_singular() ? 'single' : 'index'; ?>-wrapper">
