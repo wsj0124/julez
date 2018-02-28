@@ -1,8 +1,4 @@
-<?php
-/*
-* Template Name: About
-*/
-get_header('about'); ?>
+<?php get_header('about'); ?>
 
 <div>
    <p>Hello, I'm Tom and I'm a full-time web developer and a part-time traveller and thrill seeker.</p>

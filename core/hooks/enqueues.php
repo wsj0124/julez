@@ -8,7 +8,7 @@ namespace Julez;
  */
 function CSS()
 {
-    if (is_page_template('templates/about.php')) {
+    if (is_page('about')) {
         wp_enqueue_style('julez', THEME_URL . '/assets/css/about.css', [], uniqid(), 'all');
     } else {
         wp_enqueue_style('julez', THEME_URL . '/assets/css/main.css', [], uniqid(), 'all');
@@ -57,7 +57,7 @@ add_action('wp_enqueue_scripts', '\Julez\googleMaps');
  */
 function JS()
 {
-    if (is_page_template('templates/about.php')) {
+    if (is_page('about')) {
         wp_enqueue_script('julez', THEME_URL . '/assets/js/about.js', ['jquery'], '1.0,0', false);
     } else {
         wp_enqueue_script('julez', THEME_URL . '/assets/js/main.js', ['jquery'], '1.0,0', true);
