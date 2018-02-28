@@ -1,9 +1,6 @@
-<!doctype html>
+<?php global $julez; ?><!doctype html>
 <html>
     <head>
-        <meta charset="<?php bloginfo('charset'); ?>">
-        <meta name="viewport" content="width=device-width">
-        <?php wp_head(); ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114829304-1"></script>
         <script>
@@ -12,6 +9,14 @@
           gtag('js', new Date());
           gtag('config', 'UA-114829304-1');
         </script>
+
+        <title><?php echo $julez->seoTitle(); ?></title>
+        <?php if ($description = $julez->seoDescription()): ?>
+        <meta description content="<?php echo $description; ?>">
+        <?php endif; ?>
+        <meta charset="<?php bloginfo('charset'); ?>">
+        <meta name="viewport" content="width=device-width">
+        <?php wp_head(); ?>
     </head>
     <body>
         <header class="wrapper" id="nav">

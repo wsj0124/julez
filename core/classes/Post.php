@@ -5,6 +5,8 @@ namespace Julez;
 class Post extends Julez
 {
 
+    use SEO;
+
     /**
      * Returns the post content with the `the_content` filter applied.
      * @return string
