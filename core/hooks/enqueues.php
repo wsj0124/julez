@@ -60,7 +60,7 @@ function JS()
     if (is_page_template('templates/about.php')) {
         wp_enqueue_script('julez', THEME_URL . '/assets/js/about.js', ['jquery'], '1.0,0', false);
     } else {
-        wp_enqueue_script('julez', THEME_URL . '/assets/js/main.js', ['jquery', 'owl-carousel-js'], '1.0,0', true);
+        wp_enqueue_script('julez', THEME_URL . '/assets/js/main.js', ['jquery'], '1.0,0', true);
         wp_enqueue_script('smooth-scroll', THEME_URL . '/assets/js/smooth-scroll.js', ['jquery'], '1.0.0', true);
     }
 }
