@@ -23,18 +23,24 @@ require_once 'classes/NullObject.php';
 require_once 'classes/Julez.php';
 require_once 'classes/Post.php';
 require_once 'classes/Page.php';
+require_once 'classes/About.php';
 
 // Instantiate required classes, once WP has loaded.
 add_action('wp', function() {
     global $post, $julez;
 
-    // Pages.
-    if (is_page() || is_front_page() || is_404()) {
-        $julez = new \Julez\Page($post);
-    }
-
     // Posts.
     if (is_singular()) {
         $julez = new \Julez\Post($post);
     }
+
+    // Pages.
+    if (is_page() || is_front_page() || is_404()) {
+        $julez = new \Julez\Page($post);
+
+        if (is_page('about')) {
+            $julez = new \Julez\About($post);
+        }
+    }
+
 });

@@ -57,8 +57,8 @@
                 },
                 {
                     "key": "field_5a95c85536094",
-                    "label": "Link Title",
-                    "name": "link_title",
+                    "label": "Title",
+                    "name": "title",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -82,9 +82,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "page",
                 "operator": "==",
-                "value": "templates\/about.php"
+                "value": "812"
             }
         ]
     ],
@@ -96,5 +96,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1519765691
+    "modified": 1519838620
 }
