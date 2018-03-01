@@ -39,6 +39,11 @@ add_action('wp', function() {
 
     // Pages.
     if (is_page() || is_front_page() || is_404()) {
+        if (is_front_page()) {
+            $frontPageID = get_option('page_on_front');
+            $post = get_post($frontPageID);
+        }
+
         $julez = new \Julez\Page($post);
 
         if (is_page('about')) {
