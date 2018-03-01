@@ -1,6 +1,6 @@
 <?php get_header('about'); ?>
 
-<div>
+<section class="content">
     <?php if ($body = $julez->body()): ?>
         <?php echo $body; ?>
     <?php endif; ?>
@@ -12,6 +12,6 @@
         <?php endforeach; ?>
        </ul>
     <?php endif; ?>
-</div>
+</section>
 
 <?php get_footer('about'); ?>
