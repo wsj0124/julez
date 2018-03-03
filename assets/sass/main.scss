@@ -4,15 +4,16 @@
  */
 
 // SETTINGS
-@import "settings/settings.config";
 @import "settings/settings.core";
-@import "settings/settings.global";
+@import "settings/settings.tomcash";
 
 // TOOLS
 @import "tools/tools.font-size";
 @import "tools/tools.clearfix";
 @import "tools/tools.hidden";
+@import "tools/tools.keyframes";
 @import "tools/tools.mq";
+@import "tools/tools.vendor";
 
 // GENERIC
 @import "generic/generic.box-sizing";
@@ -41,16 +42,16 @@
 @import "objects/objects.pack";
 
 // COMPONENTS
-@import "components/components.header";
-@import "components/components.navigation";
-@import "components/components.masthead";
-@import "components/components.footer";
-@import "components/components.wrappers";
 @import "components/components.card";
+@import "components/components.header";
+@import "components/components.footer";
 @import "components/components.pagination";
-@import "components/components.single";
-@import "components/components.social";
-@import "components/components.construkt";
+@import "components/components.wrappers";
+
+// PAGES
+@import "pages/pages.about";
+@import "pages/pages.index";
+@import "pages/pages.single";
 
 // UTILITIES
 @import "utilities/utilities.clearfix";
@@ -63,36 +64,34 @@ $inuit-offsets: true;
 @import "utilities/utilities.print";
 @import "utilities/utilities.hide";
 
+// FONTS
+
 html {
     -webkit-font-smoothing:  antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: $global-background-color;
-    color: $global-font-color;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', serif;
+    background: $tc-bg;
+    color: $tc-secondary;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: $global-font-header-color;
-    font-family: 'Libre Baskerville';
+    font-family: 'Libre Baskerville', sans-serif;
+    letter-spacing: 1px;
 }
 
-p {
-    font-size: .9em;
-    line-height: 2em;
-    font-weight: 600;
+ul {
+}
 
-    @include mq($from: tablet) {
-        font-size: 1em;
-    }
+p, li {
 }
 
 a {
-    color: $global-link-color;
+    color: $tc-tertiary;
     text-decoration: none;
-    border-bottom: 1px solid $global-link-color;
+    border-bottom: 1px solid $tc-tertiary;
 
     &:hover {
-        color: $global-font-color;
-        border-color: $global-font-color;
+        color: $tc-primary;
+        border-color: $tc-primary;
     }
 }

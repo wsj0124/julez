@@ -1,0 +1,15 @@
+.about {
+
+    /* Tablet (740) */
+    @include mq($from: tablet) {
+    }
+
+    /* Desktop (980) */
+    @include mq($from: desktop) {
+    }
+
+    /* Wide (1300) */
+    @include mq($from: wide) {
+    }
+
+}
