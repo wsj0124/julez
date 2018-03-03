@@ -7,39 +7,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
 
-   .social {
-        overflow: hidden;
-        padding-bottom: 65px;
-
-        ul {
-            clear: left;
-            float: left;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            position: relative;
-            left: 50%;
-        }
-
-        li {
-            display: block;
-            float: left;
-            position: relative;
-            right: 50%;
-            font-size: .8em;
-
-            & a {
-                color: $tc-secondary;
-                margin-left: 15px;
-                margin-right: 15px;
-
-                &:hover {
-                    color: $tc-tertiary;
-                }
-            }
-        }
-    }
-
     /* Tablet (740) */
     @include mq($from: tablet) {
         @include inuit-font-size($tc-font-size-tablet);
