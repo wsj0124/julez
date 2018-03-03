@@ -19,7 +19,7 @@
         <?php wp_head(); ?>
     </head>
     <body>
-        <div class="<?php echo is_singular() ? 'single-wrapper' : 'wrapper'; ?>">
+        <div class="wrapper<?php echo is_singular() ? ' single' : ''; ?>">
             <header>
                 <h1><a href="<?php echo site_url(); ?>"><?php echo bloginfo(); ?></a></h1>
             </header>

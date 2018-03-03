@@ -5,7 +5,6 @@ header {
     text-align: center;
 
     a {
-        text-decoration: none;
         border: none;
     }
 
@@ -18,12 +17,10 @@ header {
 
     /* Tablet (740) */
     @include mq($from: tablet) {
-        padding-bottom: 100px;
     }
 
     /* Desktop (980) */
     @include mq($from: desktop) {
-        padding-top: 80px;
         padding-bottom: 110px;
     }
 

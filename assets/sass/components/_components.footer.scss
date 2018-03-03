@@ -2,53 +2,20 @@ footer {
 
     @include inuit-font-size($tc-font-size-palm);
     text-align: center;
-    margin-top: 90px;
-    margin-bottom: 40px;
+    margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
-
-   .social {
-        overflow: hidden;
-        padding-bottom: 65px;
-
-        ul {
-            clear: left;
-            float: left;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            position: relative;
-            left: 50%;
-        }
-
-        li {
-            display: block;
-            float: left;
-            position: relative;
-            right: 50%;
-            font-size: .8em;
-
-            & a {
-                color: $tc-secondary;
-                margin-left: 15px;
-                margin-right: 15px;
-
-                &:hover {
-                    color: $tc-tertiary;
-                }
-            }
-        }
-    }
 
     /* Tablet (740) */
     @include mq($from: tablet) {
         @include inuit-font-size($tc-font-size-tablet);
+        margin-top: 90px;
     }
 
     /* Desktop (980) */
     @include mq($from: desktop) {
         @include inuit-font-size($tc-font-size-desktop);
-        margin-bottom: 0;
+        margin-top: 120px;
     }
 
     /* Wide (1300) */
