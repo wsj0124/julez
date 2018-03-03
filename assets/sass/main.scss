@@ -63,28 +63,17 @@ $inuit-offsets: true;
 @import "utilities/utilities.print";
 @import "utilities/utilities.hide";
 
-// FONTS
-@font-face {
-    font-family: LibreBaskerville;
-    src: url('../fonts/LibreBaskerville-Regular.ttf');
-}
-
-@font-face {
-    font-family: OpenSans;
-    src: url('../fonts/OpenSans-Regular.ttf');
-}
-
 html {
     -webkit-font-smoothing:  antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: $global-background-color;
     color: $global-font-color;
-    font-family: OpenSans;
+    font-family: 'Open Sans';
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: $global-font-header-color;
-    font-family: LibreBaskerville;
+    font-family: 'Libre Baskerville';
 }
 
 p {
