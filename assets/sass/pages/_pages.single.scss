@@ -1,11 +1,50 @@
 .single {
 
+    text-align: center;
+
+    h1 {
+        @include inuit-font-size(48px);
+    }
+
+    h6 {
+        @include inuit-font-size($inuit-font-size-h1);
+        margin-bottom: 50px;
+        color: $tc-secondary;
+    }
+
+    p {
+        @include inuit-font-size($inuit-font-size-h1, 1.6);
+        display: block;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 120px;
+    }
+
     /* Tablet (740) */
     @include mq($from: tablet) {
     }
 
     /* Desktop (980) */
     @include mq($from: desktop) {
+        h1 {
+            @include inuit-font-size($inuit-font-size-h1);
+        }
+
+        h6 {
+            @include inuit-font-size($inuit-font-size-h6);
+        }
+
+        p {
+            @include inuit-font-size($inuit-font-size-h5, 1.6);
+            font-family: 'Libre Baskerville', serif;
+            color: $tc-secondary;
+            display: block;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 120px;
+        }
     }
 
     /* Wide (1300) */

@@ -69,20 +69,14 @@ $inuit-offsets: true;
 html {
     -webkit-font-smoothing:  antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: 'Open Sans', serif;
+    font-family: 'Open Sans', sans-serif;
     background: $tc-bg;
     color: $tc-secondary;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Libre Baskerville', sans-serif;
+    font-family: 'Libre Baskerville', serif;
     letter-spacing: 1px;
-}
-
-ul {
-}
-
-p, li {
 }
 
 a {
