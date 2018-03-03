@@ -18,8 +18,12 @@ add_action('admin_enqueue_scripts', '\Julez\adminCSS');
  */
 function CSS()
 {
-    wp_enqueue_style('fresco', THEME_URL . '/assets/css/vendor/fresco/fresco.css', [], '2.1.2');
-    wp_enqueue_style('julez', THEME_URL . '/assets/css/main.css', [], uniqid(), 'all');
+    if (is_page('about')) {
+        wp_enqueue_style('julez', THEME_URL . '/assets/css/about.css', [], uniqid(), 'all');
+    } {
+        wp_enqueue_style('fresco', THEME_URL . '/assets/css/vendor/fresco/fresco.css', [], '2.1.2');
+        wp_enqueue_style('julez', THEME_URL . '/assets/css/main.css', [], uniqid(), 'all');
+    }
 }
 add_action('wp_enqueue_scripts', '\Julez\CSS');
 
