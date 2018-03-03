@@ -5,9 +5,13 @@
                 <div class="o-layout__item <?php echo $image->width; ?>">
                     <a data-fresco-group="image-group" data-fresco-caption="<?php echo $image->image->caption(); ?>" class="fresco" href="<?php echo $image->image->url('large'); ?>">
                         <?php if ($image->width === 'u-1/1@desktop'): ?>
-                            <img src="<?php echo $image->image->url('large'); ?>">
+                            <img class="lazyload blur-up"
+                                 src="<?php echo $image->image->url('thumbnail'); ?>"
+                                 data-src="<?php echo $image->image->url('large'); ?>">
                         <?php else: ?>
-                            <img src="<?php echo $image->image->url('golden-large'); ?>">
+                            <img class="lazyload blur-up"
+                                 src="<?php echo $image->image->url('thumbnail'); ?>"
+                                 data-src="<?php echo $image->image->url('golden-large'); ?>">
                         <?php endif; ?>
                     </a>
                 </div>

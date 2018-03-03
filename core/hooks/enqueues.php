@@ -57,6 +57,8 @@ add_action('wp_enqueue_scripts', '\Julez\googleMaps');
  */
 function JS()
 {
+    wp_enqueue_script('julez', THEME_URL . '/assets/js/lib/lazysizes.min.js', [], '4.0.1', false);
+
     if (is_page('about')) {
         wp_enqueue_script('julez', THEME_URL . '/assets/js/about.js', ['jquery'], '1.0,0', false);
     } else {
