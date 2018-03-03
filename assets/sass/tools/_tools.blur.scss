@@ -1,0 +1,18 @@
+@mixin blur($blur:5px) {
+  -webkit-filter: blur($blur);
+  -moz-filter: blur($blur);
+  -o-filter: blur($blur);
+  -ms-filter: blur($blur);
+  filter: blur($blur);
+}
+
+.blurup {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: filter 400ms, -webkit-filter 400ms;
+}
+
+.blurup.lazyloaded {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+}

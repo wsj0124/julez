@@ -12,7 +12,7 @@
 <?php endif; ?>
 
 <?php if ($imageGrid = $julez->imageGrid()): ?>
-    <div class="o-layout">
+    <div class="o-layout images">
     <?php foreach ($imageGrid as $item): ?>
         <div class="o-layout__item u-<?php echo $item->mobile; ?>@mobile u-<?php echo $item->tablet; ?>@tablet u-<?php echo $item->desktop; ?>@desktop">
             <a
@@ -20,9 +20,9 @@
             data-fresco-caption="<?php echo $item->image->caption(); ?>"
             class="fresco" href="<?php echo $item->image->url('large'); ?>">
                 <img
-                    src="<?php echo $item->image->url('thumbnail'); ?>"
-                    data-src="<?php echo $item->image->url('golden-medium'); ?>"
-                    class="lazyload">
+                    src="<?php echo $item->image->url('golden-small'); ?>"
+                    data-src="<?php echo $item->image->url('golden-large'); ?>"
+                    class="lazyload blurup">
             </a>
         </div>
     <?php endforeach; ?>
