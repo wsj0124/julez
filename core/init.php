@@ -32,10 +32,7 @@ require_once 'classes/About.php';
 add_action('wp', function() {
     global $post, $julez;
 
-    // Posts.
-    if (is_singular()) {
-        $julez = new \Julez\Post($post);
-    }
+    $julez = new \Julez\Post($post);
 
     // Pages.
     if (is_page() || is_front_page() || is_404()) {
