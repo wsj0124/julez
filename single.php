@@ -15,10 +15,15 @@
     <div class="o-layout">
     <?php foreach ($imageGrid as $item): ?>
         <div class="o-layout__item u-<?php echo $item->mobile; ?>@mobile u-<?php echo $item->tablet; ?>@tablet u-<?php echo $item->desktop; ?>@desktop">
-            <img
-                src="<?php echo $item->image->url('thumbnail'); ?>"
-                data-src="<?php echo $item->image->url('golden-medium'); ?>"
-                class="lazyload">
+            <a
+            data-fresco-group="image-group"
+            data-fresco-caption="<?php echo $item->image->caption(); ?>"
+            class="fresco" href="<?php echo $item->image->url('large'); ?>">
+                <img
+                    src="<?php echo $item->image->url('thumbnail'); ?>"
+                    data-src="<?php echo $item->image->url('golden-medium'); ?>"
+                    class="lazyload">
+            </a>
         </div>
     <?php endforeach; ?>
     </div>
