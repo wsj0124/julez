@@ -2,20 +2,20 @@ footer {
 
     @include inuit-font-size($tc-font-size-palm);
     text-align: center;
-    margin-top: 90px;
-    margin-bottom: 40px;
+    margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
 
     /* Tablet (740) */
     @include mq($from: tablet) {
         @include inuit-font-size($tc-font-size-tablet);
+        margin-top: 90px;
     }
 
     /* Desktop (980) */
     @include mq($from: desktop) {
         @include inuit-font-size($tc-font-size-desktop);
-        margin-bottom: 0;
+        margin-top: 120px;
     }
 
     /* Wide (1300) */
