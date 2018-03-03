@@ -14,9 +14,6 @@ $inuit-global-font-size:    16px !default;
 $inuit-global-line-height:  24px !default;
 
 
-
-
-
 // Spacing values are determined based on your project’s global line height (i.e
 // your baseline grid). It is not recommended that you modify these following
 // variables (it can break your vertical rhythm), but if you need to, you can.
@@ -31,10 +28,6 @@ $inuit-global-spacing-unit-factor-tiny:   0.25 !default;
 $inuit-global-spacing-unit-factor-small:  0.5  !default;
 $inuit-global-spacing-unit-factor-large:  2    !default;
 $inuit-global-spacing-unit-factor-huge:   4    !default;
-
-
-
-
 
 // Check that the chosen font rules are pixel numbers.
 
@@ -74,7 +67,6 @@ $inuit-global-spacing-unit-factor-huge:   4    !default;
   }
 
 }
-
 
 // Private/framework-only reassignment. Do not alter anything below.
 

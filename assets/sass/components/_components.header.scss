@@ -1,31 +1,34 @@
-@import "../tools/tools.mq";
+header {
 
-header.wrapper {
-    width: 100%;
-    min-width: 100%;
-    padding-top: 50px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
 
-    h1 a {
-        font-size: .8em;
-        color: $global-font-header-color;
-        display: block;
-        text-align: center;
-        text-transform: uppercase;
+    a {
         text-decoration: none;
-        letter-spacing: 4px;
-        padding-top: 10px;
         border: none;
     }
 
-    @include mq($from: tablet) {
-        h1 a {
-            font-size: 1.1em;
-        }
+    h1 a {
+        @include inuit-font-size(60px);
+        color: $tc-primary;
+        text-transform: uppercase;
+        letter-spacing: 4px;
     }
 
-    @include mq($from: desktop) {
-        h1 a {
-            font-size: 1.6em;
-        }
+    /* Tablet (740) */
+    @include mq($from: tablet) {
+        padding-bottom: 100px;
     }
+
+    /* Desktop (980) */
+    @include mq($from: desktop) {
+        padding-top: 80px;
+        padding-bottom: 110px;
+    }
+
+    /* Wide (1300) */
+    @include mq($from: wide) {
+    }
+
 }

@@ -8,8 +8,9 @@ namespace Julez;
 function menus()
 {
     register_nav_menus([
-        'header-menu' => 'Header Menu',
-        'footer-menu' => 'Footer Menu'
+        'header' => 'Header',
+        'footer' => 'Footer',
+        'social' => 'Social'
     ]);
 }
 add_action('init', '\Julez\menus');

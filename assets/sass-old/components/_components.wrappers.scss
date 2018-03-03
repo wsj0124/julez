@@ -1,0 +1,21 @@
+.index-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include mq($from: tablet) {
+        width: $global-max-width;
+    }
+}
+
+.single-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include mq($from: tablet) {
+        width: 800px;
+    }
+}
