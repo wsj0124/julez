@@ -18,6 +18,7 @@ require_once 'hooks/images.php';
 require_once 'hooks/seo.php';
 
 // Traits.
+require_once 'traits/ImageGrid.php';
 require_once 'traits/SEO.php';
 
 // Classes.

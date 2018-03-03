@@ -11,8 +11,17 @@
     </section>
 <?php endif; ?>
 
-<section class="content">
-    <?php construkt(); ?>
-</section>
+<?php if ($imageGrid = $julez->imageGrid()): ?>
+    <div class="o-layout">
+    <?php foreach ($imageGrid as $item): ?>
+        <div class="o-layout__item u-<?php echo $item->mobile; ?>@mobile u-<?php echo $item->tablet; ?>@tablet u-<?php echo $item->desktop; ?>@desktop">
+            <img
+                src="<?php echo $item->image->url('thumbnail'); ?>"
+                data-src="<?php echo $item->image->url('golden-medium'); ?>"
+                class="lazyload">
+        </div>
+    <?php endforeach; ?>
+    </div>
+<?php endif; ?>
 
 <?php get_footer(); ?>

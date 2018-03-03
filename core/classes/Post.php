@@ -5,6 +5,7 @@ namespace Julez;
 class Post extends Julez
 {
 
+    use ImageGrid;
     use SEO;
 
     /**

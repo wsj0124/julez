@@ -3,6 +3,16 @@
 namespace Julez;
 
 /**
+ * Enqueues the admin CSS.
+ * @return null
+ */
+function adminCSS()
+{
+    wp_enqueue_style('admin-css', THEME_URL . '/assets/css/acf.css', [], '1.0.1');
+}
+add_action('admin_enqueue_scripts', '\Julez\adminCSS');
+
+/**
  * Enqueues the theme CSS.
  * @return null
  */
