@@ -2,7 +2,7 @@
 
 <section class="single-info">
     <h1><?php echo $julez->title(); ?></h1>
-    <h6><?php echo $julez->date('F jS, Y'); ?></h6>
+    <h6>~ <?php echo $julez->date('F jS, Y'); ?> ~</h6>
 </section>
 
 <?php if ($introduction = $julez->introduction()): ?>
