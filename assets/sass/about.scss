@@ -1,0 +1,114 @@
+/**
+ * inuitcss, by @csswizardry
+ * github.com/inuitcss | inuitcss.com
+ */
+
+// SETTINGS
+@import "settings/settings.core";
+
+// TOOLS
+@import "tools/tools.font-size";
+@import "tools/tools.keyframes";
+@import "tools/tools.mq";
+@import "tools/tools.vendor";
+
+// GENERIC
+@import "generic/generic.box-sizing";
+@import "generic/generic.normalize";
+@import "generic/generic.reset";
+@import "generic/generic.shared";
+
+// ELEMENTS
+@import "elements/elements.page";
+@import "elements/elements.headings";
+
+// PAGE
+html {
+    -webkit-font-smoothing:  antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background-color: #642B73;
+}
+
+p {
+    @include inuit-font-size(16px, 1.8);
+    margin-bottom: 40px;
+}
+
+acronym {
+    border-bottom: 1px dotted white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    @include vendor(transition, .7s);
+
+    &:hover {
+        color: #FF0;
+    }
+}
+
+ul {
+    @include inuit-font-size(14px, 2.5);
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    list-style-position: inside;
+    display: inline;
+    margin-right: 13px;
+}
+
+.content {
+    @include vendor(animation, fadein 2.5s);
+    margin: 25% 5% 5% 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+
+// MEDIA QUERIES
+
+/* Tablet (740) */
+@include mq($from: tablet) {
+    .content {
+        margin-top: 20%;
+        margin-left: 10%;
+        max-width: 500px;
+    }
+
+    p {
+        @include inuit-font-size(22px, 2.2);
+        margin-bottom: 45px;
+    }
+
+    ul {
+        @include inuit-font-size(18px, 2.5);
+    }
+}
+
+/* Desktop (980) */
+@include mq($from: desktop) {
+    .content {
+        margin-top: 11%;
+        margin-left: 8%;
+        max-width: 600px;
+    }
+
+    p {
+        @include inuit-font-size(24px, 2);
+    }
+}
+
+/* Wide (1300) */
+@include mq($from: wide) {
+}

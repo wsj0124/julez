@@ -13,4 +13,4 @@
           gtag('config', 'UA-114829304-1');
         </script>
     </head>
-    <body class="about">
+    <body>

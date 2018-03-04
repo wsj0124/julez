@@ -2,8 +2,6 @@ jQuery(function($){
 
     /**
      * Original source:  https://codepen.io/quasimondo/pen/lDdrF
-     * Gradient ideas:   https://uigradients.com/#CrimsonTide
-     * Simple hex > rgb: https://www.webpagefx.com/web-design/hex-to-rgb/
      */
 
     var colors = [

@@ -33,7 +33,7 @@ add_action('wp_enqueue_scripts', '\Julez\CSS');
  */
 function fonts()
 {
-    wp_enqueue_style('open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans', [], '1.0.0', 'all');
+    wp_enqueue_style('source-sans-pro', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro', [], '1.0.0', 'all');
     wp_enqueue_style('libre-baskerville', 'https://fonts.googleapis.com/css?family=Libre+Baskerville', [], '1.0.0', 'all');
     wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/40d61d11c6.js', [], '1.0.0', 'all');
 }
@@ -46,7 +46,7 @@ add_action('wp_enqueue_scripts', '\Julez\fonts');
 function JS()
 {
     if (is_page('about')) {
-        wp_enqueue_script('julez', THEME_URL . '/assets/js/about.js', ['jquery'], uniqid(), false);
+        wp_enqueue_script('julez', THEME_URL . '/assets/js/about.js', ['jquery'], uniqid(), true);
     } else {
         wp_enqueue_script('fresco', THEME_URL . '/assets/js/vendor/fresco.min.js', ['jquery'], '2.1.2', true);
         wp_enqueue_script('lazyload', THEME_URL . '/assets/js/vendor/lazysizes.min.js', [], '4.0.1', false);
