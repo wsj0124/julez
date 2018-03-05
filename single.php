@@ -20,7 +20,7 @@
             data-fresco-caption="<?php echo $item->image->caption(); ?>"
             class="fresco" href="<?php echo $item->image->url('large'); ?>">
                 <img
-                    src="<?php echo $item->image->url('golden-small'); ?>"
+                    src="<?php echo $item->image->url('golden-tiny'); ?>"
                     data-src="<?php echo $item->image->url('golden-large'); ?>"
                     class="lazyload blurup">
             </a>

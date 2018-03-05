@@ -8,7 +8,7 @@
                     <a href="<?php echo $story->permalink(); ?>">
                         <div class="thumbnail">
                             <img
-                                src="<?php echo $story->thumbnail()->url('golden-small'); ?>"
+                                src="<?php echo $story->thumbnail()->url('golden-tiny'); ?>"
                                 data-src="<?php echo $story->thumbnail()->url('golden-medium'); ?>"
                                 class="lazyload blurup"
                                 alt="<?php echo $story->title(); ?>"
