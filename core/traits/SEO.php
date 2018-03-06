@@ -15,6 +15,10 @@ trait SEO
             return $description;
         }
 
+        if ($introduction = $this->introduction()) {
+            return $introduction;
+        }
+
         return '';
     }
 
@@ -24,12 +28,10 @@ trait SEO
      */
     public function seoTitle()
     {
-        if ($title = $this->field('seo_title')) {
-            return $title;
-            return str_replace('{site}', bloginfo(), $title);
-        }
+        $postTitle = $this->title();
+        $siteName  = get_bloginfo();
 
-        return $this->title();
+        return str_replace(['{post_title}', '{site_name}'], [$postTitle, $siteName], $this->field('seo_title'));
     }
 
 }
