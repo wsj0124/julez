@@ -15,7 +15,6 @@ require_once 'hooks/construkt.php';
 require_once 'hooks/enqueues.php';
 require_once 'hooks/menus.php';
 require_once 'hooks/images.php';
-require_once 'hooks/seo.php';
 
 // Traits.
 require_once 'traits/ImageGrid.php';

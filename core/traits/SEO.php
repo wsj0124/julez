@@ -30,8 +30,14 @@ trait SEO
     {
         $postTitle = $this->title();
         $siteName  = get_bloginfo();
+        $titleTag  = $this->field('seo_title');
 
-        return str_replace(['{post_title}', '{site_name}'], [$postTitle, $siteName], $this->field('seo_title'));
+        if (is_home()) {
+            $postID   = get_option('page_on_front');
+            $titleTag = get_field('seo_title', $postID);
+        }
+
+        return str_replace(['{post_title}', '{site_name}'], [$postTitle, $siteName], $titleTag);
     }
 
 }
