@@ -14,7 +14,7 @@ class Post extends Julez
      */
     public function content()
     {
-        return apply_filters('the_content', $this->field('content'));
+        return apply_filters('the_content', $this->post->post_content);
     }
 
     /**

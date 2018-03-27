@@ -12,21 +12,29 @@
 <?php endif; ?>
 
 <?php if ($imageGrid = $julez->imageGrid()): ?>
-    <div class="o-layout images">
-    <?php foreach ($imageGrid as $item): ?>
-        <div class="o-layout__item u-<?php echo $item->mobile; ?>@mobile u-<?php echo $item->tablet; ?>@tablet u-<?php echo $item->desktop; ?>@desktop">
-            <a
-            data-fresco-group="image-group"
-            data-fresco-caption="<?php echo $item->image->caption(); ?>"
-            class="fresco" href="<?php echo $item->image->url('large'); ?>">
-                <img
-                    src="<?php echo $item->image->url('golden-tiny'); ?>"
-                    data-src="<?php echo $item->image->url('golden-large'); ?>"
-                    class="lazyload blurup">
-            </a>
+    <section class="image-grid">
+        <div class="o-layout images">
+            <?php foreach ($imageGrid as $item): ?>
+                <div class="o-layout__item u-<?php echo $item->mobile; ?>@mobile u-<?php echo $item->tablet; ?>@tablet u-<?php echo $item->desktop; ?>@desktop">
+                    <a
+                    data-fresco-group="image-group"
+                    data-fresco-caption="<?php echo $item->image->caption(); ?>"
+                    class="fresco" href="<?php echo $item->image->url('large'); ?>">
+                        <img
+                            src="<?php echo $item->image->url('golden-tiny'); ?>"
+                            data-src="<?php echo $item->image->url('golden-large'); ?>"
+                            class="lazyload blurup">
+                    </a>
+                </div>
+            <?php endforeach; ?>
         </div>
-    <?php endforeach; ?>
-    </div>
+    </section>
+<?php endif; ?>
+
+<?php if ($content = $julez->content()): ?>
+    <section class="content">
+        <?php echo $content; ?>
+    </section>
 <?php endif; ?>
 
 <?php get_footer(); ?>
