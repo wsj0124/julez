@@ -21,9 +21,9 @@ require_once 'traits/ImageGrid.php';
 require_once 'traits/SEO.php';
 
 // Classes.
+require_once 'classes/Julez.php';
 require_once 'classes/Attachment.php';
 require_once 'classes/NullObject.php';
-require_once 'classes/Julez.php';
 require_once 'classes/Post.php';
 require_once 'classes/Page.php';
 require_once 'classes/About.php';

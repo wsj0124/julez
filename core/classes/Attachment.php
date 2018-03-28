@@ -11,7 +11,7 @@ class Attachment
      */
     public function __construct($post)
     {
-        $this->post = $this->build($post);
+        $this->post = (object) $this->build($post);
     }
 
     /**
@@ -20,7 +20,7 @@ class Attachment
      */
     public function caption()
     {
-        return $this->post->post_excerpt;
+        return $this->post->caption;
     }
 
     /**
@@ -54,7 +54,7 @@ class Attachment
      */
     private function build($post)
     {
-        $meta = get_post_meta($post->ID, '_wp_attachment_metadata', true);
+        $meta = get_post_meta($post['id'], '_wp_attachment_metadata', true);
 
         if (is_array($meta)) {
             $post = array_merge((array) $post, $meta);
