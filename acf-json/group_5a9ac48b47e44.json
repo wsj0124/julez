@@ -46,37 +46,29 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_5a9ac528ba765",
-                    "label": "Mobile",
-                    "name": "mobile",
-                    "type": "select",
+                    "key": "field_5abbd6c01ffcb",
+                    "label": "Ratio",
+                    "name": "ratio",
+                    "type": "radio",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
                     "choices": {
-                        "1\/1": "1\/1 (100%)",
-                        "1\/2": "1\/2 (50%)",
-                        "1\/3": "1\/3 (33%)",
-                        "2\/3": "2\/3 (66%)",
-                        "1\/4": "1\/4 (25%)",
-                        "3\/4": "3\/4 (75%)",
-                        "2\/5": "2\/5 (40%)",
-                        "3\/5": "3\/5 (60%)"
+                        "original": "Original",
+                        "cropped": "Cropped",
+                        "square": "Square"
                     },
-                    "default_value": [
-                        "1\/1"
-                    ],
                     "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "return_format": "value",
-                    "placeholder": ""
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value"
                 },
                 {
                     "key": "field_5a9ac58dba766",
@@ -164,5 +156,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1520093668
+    "modified": 1522260704
 }
