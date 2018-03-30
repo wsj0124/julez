@@ -15,7 +15,6 @@ trait ImageGrid
             return array_map(function($image) {
                 return (object) [
                     'image'   => new Attachment($image['image']),
-                    'mobile'  => $image['mobile'],
                     'tablet'  => $image['tablet'],
                     'desktop' => $image['desktop'],
                 ];
